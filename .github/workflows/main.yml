@@ -1,1 +1,31 @@
+name: software-process
+run-name: ${{ github.actor }} is using the pipline 🚀🤳
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
 
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up JDK 17
+        uses: actions/setup-java@v3
+        with:
+          java-version: "17"
+          distribution: "temurin"
+      - name: Run Tests
+        run: mvn -Dtest=ManualHandlingTest test
+        run: mvn -Dtest=ManualHandlingTestRejected test
+        run: mvn -Dtest=ProcessTypeAutomaticTest test
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up JDK 17
+        uses: actions/setup-java@v3
+        with:
+          java-version: "17"
+          distribution: "temurin"
+      - name: Run PMD
+        run: mvn pmd:pmd pmd:cpd
