@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" id="Definitions_1irsivz" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.9.0" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.18.0">
+  <decision id="Decision1" name="Process Type Decision">
+    <decisionTable id="DecisionTable_0f0ry6v">
+      <input id="Input_1" label="Applicant Age" camunda:inputVariable="applicantAge">
+        <inputExpression id="InputExpression_1" typeRef="integer">
+          <text></text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_0saye5w" label="Applied Amount" camunda:inputVariable="creditAmount">
+        <inputExpression id="LiteralExpression_0i33bx4" typeRef="integer">
+          <text></text>
+        </inputExpression>
+      </input>
+      <output id="Output_1" label="Process Type" name="processType" typeRef="string" />
+      <rule id="DecisionRule_084s5em">
+        <description>Manual for young applicants</description>
+        <inputEntry id="UnaryTests_118x90t">
+          <text>&lt;= 25</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1m5covl">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1tqtzuk">
+          <text>"manual"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0uw5f2e">
+        <description>Manual for high amounts</description>
+        <inputEntry id="UnaryTests_0jyowbf">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1wcwc92">
+          <text>&gt;75000</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1we59o6">
+          <text>"manual"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1xron1b">
+        <description>Automatic for "normal" applications</description>
+        <inputEntry id="UnaryTests_0melu9g">
+          <text>[26..65]</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0tm91og">
+          <text>&lt;= 75000</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0gd35yl">
+          <text>"automatic"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_09s5ph0">
+        <description>Manual for elderly applicants</description>
+        <inputEntry id="UnaryTests_1wy95ay">
+          <text>&gt;65</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1qmgqm4">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1810ge8">
+          <text>"manual"</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram>
+      <dmndi:DMNShape dmnElementRef="Decision1">
+        <dc:Bounds height="80" width="180" x="160" y="100" />
+      </dmndi:DMNShape>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</definitions>

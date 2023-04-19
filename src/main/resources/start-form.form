@@ -1,0 +1,47 @@
+{
+  "components": [
+    {
+      "label": "Applicant Name",
+      "type": "textfield",
+      "id": "Field_02qfos7",
+      "key": "applicantName",
+      "validate": {
+        "required": false
+      }
+    },
+    {
+      "label": "Applicant Age",
+      "type": "number",
+      "id": "Field_1iixwrs",
+      "key": "applicantAge",
+      "validate": {
+        "required": false
+      }
+    },
+    {
+      "label": "Credit Amount",
+      "type": "number",
+      "id": "Field_0f08xmf",
+      "key": "creditAmount",
+      "validate": {
+        "required": false
+      }
+    },
+    {
+      "action": "submit",
+      "label": "Send application",
+      "type": "button",
+      "id": "Field_0uy6wcm",
+      "key": "field_0mto1w3"
+    }
+  ],
+  "type": "default",
+  "id": "start-form",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.9.0"
+  },
+  "executionPlatform": "Camunda Platform",
+  "executionPlatformVersion": "7.18.0",
+  "schemaVersion": 7
+}

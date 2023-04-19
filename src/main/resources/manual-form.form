@@ -1,0 +1,41 @@
+{
+  "components": [
+    {
+      "text": "Name: {{ $applicantName }}",
+      "type": "text",
+      "id": "Field_18dvx5q"
+    },
+    {
+      "text": "Age: {{ $applicantAge }}",
+      "type": "text",
+      "id": "Field_13iy4c8"
+    },
+    {
+      "text": "Amount: {{ $creditAmount }}",
+      "type": "text",
+      "id": "Field_0vsuyap"
+    },
+    {
+      "label": "Approved?",
+      "type": "checkbox",
+      "id": "Field_1k6nlle",
+      "key": "approved"
+    },
+    {
+      "action": "submit",
+      "label": "Submit",
+      "type": "button",
+      "id": "Field_1x8irqf",
+      "key": "field_0re0sco"
+    }
+  ],
+  "type": "default",
+  "id": "manual-form",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.9.0"
+  },
+  "executionPlatform": "Camunda Platform",
+  "executionPlatformVersion": "7.18.0",
+  "schemaVersion": 7
+}

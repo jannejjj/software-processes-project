@@ -1,0 +1,41 @@
+{
+  "components": [
+    {
+      "text": "# Name",
+      "type": "text",
+      "id": "Field_12ef7t8"
+    },
+    {
+      "text": "# Age",
+      "type": "text",
+      "id": "Field_15fra15"
+    },
+    {
+      "text": "# Amount",
+      "type": "text",
+      "id": "Field_1d43pah"
+    },
+    {
+      "label": "Review approved?",
+      "type": "checkbox",
+      "id": "Field_1rt7hyz",
+      "key": "reviewApproved"
+    },
+    {
+      "action": "submit",
+      "label": "Submit",
+      "type": "button",
+      "id": "Field_0rggc0i",
+      "key": "field_0jlbp1h"
+    }
+  ],
+  "type": "default",
+  "id": "review-form",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.9.0"
+  },
+  "executionPlatform": "Camunda Platform",
+  "executionPlatformVersion": "7.18.0",
+  "schemaVersion": 7
+}
