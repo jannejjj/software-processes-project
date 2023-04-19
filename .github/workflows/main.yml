@@ -1,5 +1,5 @@
 name: software-process
-run-name: ${{ github.actor }} is using the pipline 🚀🤳
+run-name: ${{ github.actor }} is using the pipline 🚀🚗🏎🛺🤳
 on: [push]
 jobs:
   build:
@@ -14,8 +14,16 @@ jobs:
           distribution: "temurin"
       - name: Run Unit Tests 1
         run: mvn -Dtest=ManualHandlingTest test
+      - name: Run Unit Tests 2
+        run: mvn -Dtest=ManualHandlingTestRejected test
       - name: Run Unit Tests 3
         run: mvn -Dtest=ProcessTypeAutomaticTest test
+      - name: Run Unit Tests 4
+        run: mvn -Dtest=ProcessTypeTest test
+      - name: Run Unit Tests 5
+        run: mvn -Dtest=ReviewTest test
+      - name: Run Unit Tests 6
+        run: mvn -Dtest=ReviewTestRejected test
 
       - uses: actions/checkout@v3
       - name: Set up JDK 17
