@@ -14,5 +14,3 @@ jobs:
           distribution: "temurin"
       - name: Run Tests
         run: mvn -Dtest=ManualHandlingTest test
-        run: mvn -Dtest=ManualHandlingTestRejected test
-        run: mvn -Dtest=ProcessTypeAutomaticTest test
