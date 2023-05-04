@@ -1,19 +1,32 @@
 {
   "components": [
     {
-      "text": "Name: {{ $applicantName }}",
-      "type": "text",
-      "id": "Field_18dvx5q"
+      "label": "Name",
+      "type": "textfield",
+      "id": "Field_003jznf",
+      "key": "applicantName",
+      "disabled": true
     },
     {
-      "text": "Age: {{ $applicantAge }}",
-      "type": "text",
-      "id": "Field_13iy4c8"
+      "label": "Age",
+      "type": "textfield",
+      "id": "Field_0uw1ti1",
+      "key": "applicantAge",
+      "disabled": true
     },
     {
-      "text": "Amount: {{ $creditAmount }}",
-      "type": "text",
-      "id": "Field_0vsuyap"
+      "label": "Credit Amount ",
+      "type": "textfield",
+      "id": "Field_0dc7v2k",
+      "key": "creditAmount",
+      "disabled": true
+    },
+    {
+      "label": "Equity Capital",
+      "type": "textfield",
+      "id": "Field_1dhscyp",
+      "key": "equityCapital",
+      "disabled": true
     },
     {
       "label": "Approved?",

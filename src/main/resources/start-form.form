@@ -28,6 +28,12 @@
       }
     },
     {
+      "label": "Equity Capital",
+      "type": "number",
+      "id": "Field_141e0un",
+      "key": "equityCapital"
+    },
+    {
       "action": "submit",
       "label": "Send application",
       "type": "button",

@@ -1,19 +1,32 @@
 {
   "components": [
     {
-      "text": "# Name",
-      "type": "text",
-      "id": "Field_12ef7t8"
+      "label": "Name",
+      "type": "textfield",
+      "id": "Field_1akq8nb",
+      "key": "applicantName",
+      "disabled": true
     },
     {
-      "text": "# Age",
-      "type": "text",
-      "id": "Field_15fra15"
+      "label": "Age",
+      "type": "textfield",
+      "id": "Field_09y4yvz",
+      "key": "applicantAge",
+      "disabled": true
     },
     {
-      "text": "# Amount",
-      "type": "text",
-      "id": "Field_1d43pah"
+      "label": "Equity Capital",
+      "type": "textfield",
+      "id": "Field_04jk1ac",
+      "key": "equityCapital",
+      "disabled": true
+    },
+    {
+      "label": "Credit Amount",
+      "type": "textfield",
+      "id": "Field_1x2o7lh",
+      "key": "creditAmount",
+      "disabled": true
     },
     {
       "label": "Review approved?",
