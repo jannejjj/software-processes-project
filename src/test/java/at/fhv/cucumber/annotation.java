@@ -10,23 +10,23 @@ import at.fhv.AutomaticHandling;
 import camundajar.impl.scala.Console;
 
 @CucumberContextConfiguration
-public class annotation {
+public class Annotation {
 
-    private Double equityCapital;
-    private Double creditAmount;
+    private Integer equityCapital;
+    private Integer creditAmount;
     private AutomaticHandling automaticHandling;
     private Boolean approved;
 
     @Given("^Equity capital in an application is too low$")
-    public void EQTooLow() {
-        creditAmount = (double) 100000;
-        equityCapital = (double) 35000; // 35%
+    public void eQTooLow() {
+        creditAmount =  100000;
+        equityCapital =  35000; // 35%
     }
 
     @Given("^Equity capital in an application is high enough$")
-    public void EQHighEnough() {
-        creditAmount = (double) 100000;
-        equityCapital = (double) 45000; // 45%
+    public void eQHighEnough() {
+        creditAmount =  100000;
+        equityCapital =  45000; // 45%
     }
 
     @When("^The application goes to automatic handling$")
