@@ -33,21 +33,16 @@ public class Annotation {
     public void eQ2TimesOrMore() {
         creditAmount =  1000;
         equityCapital =  2000; // 200%
-        System.err.println("200");
-
     }
 
     @When("^The application goes to automatic handling$")
     public void automaticHandling() {
         automaticHandling = new AutomaticHandling();
         approved = automaticHandling.equityRatioIsOK(creditAmount, equityCapital);
-
     }
 
     @Then("^The application will not be approved$")
     public void testNotApproved() {
-        System.err.println(approved);
-
         Assert.assertEquals(false, approved);
     }
 
