@@ -16,8 +16,8 @@ public class AutomaticHandling implements JavaDelegate {
 
     public Boolean equityRatioIsOK(Integer creditAmount, Integer equityCapital) {
 
-        Double procent = ((double )equityCapital / creditAmount) ;
-        if (procent >= 0.4) {
+        Double procent = ((double ) equityCapital / creditAmount) ;
+        if (procent >= 0.4 && procent < 2) {
             return true;
         }
         return false;
