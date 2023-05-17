@@ -7,7 +7,6 @@ import io.cucumber.java.en.Then;
 import org.junit.Assert;
 
 import at.fhv.AutomaticHandling;
-import camundajar.impl.scala.Console;
 
 @CucumberContextConfiguration
 public class annotation {
