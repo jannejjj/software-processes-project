@@ -40,6 +40,11 @@ jobs:
           java-version: "17"
           distribution: "temurin"
       - name: Build project with Maven
-        run: mvn -B package --file pom.xm
+        run: mvn -B package --file pom.xm -DskipTests
+      - run: mkdir staging && cp target/*jar-with-dependencies.jar staging
+      - uses: actions/upload-artifact@v1
+        with:
+          name: Package
+          path: staging
       - name: Run PMD
         run: mvn pmd:pmd pmd:cpd
