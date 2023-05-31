@@ -41,7 +41,8 @@ jobs:
           distribution: "temurin"
       - name: Build project with Maven
         run: mvn -B package --file pom.xml -DskipTests
-      - run: mkdir staging && cp target/*jar-with-dependencies.jar staging
+      - run: mkdir staging
+      - run: cp target/*jar-with-dependencies.jar staging
       - uses: actions/upload-artifact@v1
         with:
           name: Package
