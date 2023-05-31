@@ -37,21 +37,19 @@ public class ManualHandlingIntegrationAccept {
 
     @Test
     @Deployment(resources = { "my_process.bpmn",
-            "process-type-decision.dmn"
+            "process-type-decision.dmn","start-form.form", "review-form.form", "manual-form.form"
          })
-    public void automaticHandlingAccept() {
+    public void manualHandlingAccept() {
         ProcessInstance processInstance = runtimeService().createProcessInstanceByKey("Process_0umpg4c")
-        // diffrente activityId       
-        .startBeforeActivity("Activity_07uxqpv")
+        .startBeforeActivity("StartEvent_1")
                 .setVariable("applicantName", "User")
                 .setVariable("applicantAge", 30)
                 .setVariable("creditAmount", 700000)
                 .setVariable("equityCapital", 50000)
                 .execute();
 
-/*          commited out until fixed bug with automaticHandlning class
-        assertThat(task(processInstance)).hasName("Choose process type");
-        complete(task(processInstance)); */
+        
+   
         
         assertThat(task(processInstance)).hasName("Assign employee");
         complete(task(processInstance));

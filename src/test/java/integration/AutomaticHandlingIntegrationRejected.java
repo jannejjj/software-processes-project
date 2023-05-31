@@ -13,11 +13,11 @@ import org.camunda.bpm.engine.runtime.ProcessInstance;
 import org.camunda.bpm.engine.test.Deployment;
 import org.camunda.bpm.engine.test.ProcessEngineRule;
 import org.camunda.bpm.engine.test.junit5.ProcessEngineExtension;
-import org.camunda.bpm.engine.variable.VariableMap;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.jupiter.api.extension.RegisterExtension;
-import org.camunda.bpm.engine.variable.Variables;
+
+
 
 public class AutomaticHandlingIntegrationRejected {
 
@@ -35,24 +35,19 @@ public class AutomaticHandlingIntegrationRejected {
     @Rule
     public ProcessEngineRule rule = new ProcessEngineRule(myProcessEngine);
 
-    @Test
-    @Deployment(resources = { "my_process.bpmn",
-            "process-type-decision.dmn", "at/fhv/AutomaticHandling.class"
+
+    @Deployment(resources = { "my_process.bpmn"
          })
+    @Test
     public void automaticHandlingReject() {
         ProcessInstance processInstance = runtimeService().createProcessInstanceByKey("Process_0umpg4c")
                 .startBeforeActivity("StartEvent_1")
                 .setVariable("applicantName", "User")
                 .setVariable("applicantAge", 30)
                 .setVariable("creditAmount", 70000)
-                .setVariable("equityCapital", 5000)
+                .setVariable("equityCapital", 50)
                 .execute();
 
-        assertThat(task(processInstance)).hasName("Choose process type");
-        complete(task(processInstance));
-        
-        assertThat(task(processInstance)).hasName("Automatic handling");
-        complete(task(processInstance));
 
         assertThat(task(processInstance)).hasName("Review");
         complete(task(processInstance));

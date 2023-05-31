@@ -26,6 +26,12 @@ jobs:
         run: mvn -Dtest=ReviewTestRejected test
       - name: Run CucumberTests
         run: mvn -Dtest=CucumberTest test
+      - name: Run IntegrationTest 1
+        run: mvn -Dtest=AutomaticHandlingIntegrationAccept test
+      - name: Run IntegrationTest 2
+        run: mvn -Dtest=AutomaticHandlingIntegrationRejected test
+      - name: Run IntegrationTest 3
+        run: mvn -Dtest=ManualHandlingIntegrationAccept test
 
       - uses: actions/checkout@v3
       - name: Set up JDK 17

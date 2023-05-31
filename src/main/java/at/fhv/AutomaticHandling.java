@@ -1,10 +1,12 @@
 package at.fhv;
 
+
 import org.camunda.bpm.engine.delegate.DelegateExecution;
 import org.camunda.bpm.engine.delegate.JavaDelegate;
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Component;
 
-@Service
+
+@Component()
 public class AutomaticHandling implements JavaDelegate {
 
     @Override
