@@ -1,0 +1,25 @@
+{
+    "variables": {
+        "creditAmount": {
+            "value": 50000,
+            "type": "Integer"
+        },
+        "equityCapital": {
+            "value": 25000,
+            "type": "Integer"
+        },
+        "applicantName": {
+            "value": "Test Applicant",
+            "type": "String"
+        },
+        "applicantAge": {
+            "value": 44,
+            "type": "Integer"
+        }
+    },
+    "startInstructions": {
+        "type": "startBeforeActivity",
+        "activityId": "Activity_1reqwv6"
+    },
+    "businessKey": "Test1"
+}
