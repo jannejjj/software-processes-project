@@ -39,5 +39,7 @@ jobs:
         with:
           java-version: "17"
           distribution: "temurin"
+      - name: Build project with Maven
+        run: mvn -B package --file pom.xm
       - name: Run PMD
         run: mvn pmd:pmd pmd:cpd
