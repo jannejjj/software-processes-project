@@ -36,7 +36,8 @@ public class AutomaticHandlingIntegrationRejected {
     public ProcessEngineRule rule = new ProcessEngineRule(myProcessEngine);
 
 
-    @Deployment(resources = { "my_process.bpmn"
+    @Deployment(resources = { "my_process.bpmn",
+            "process-type-decision.dmn", "start-form.form"
          })
     @Test
     public void automaticHandlingReject() {
