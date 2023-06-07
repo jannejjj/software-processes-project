@@ -2,11 +2,11 @@
     "variables": {
         "creditAmount": {
             "value": 50000,
-            "type": "Integer"
+            "type": "Number"
         },
         "equityCapital": {
             "value": 25000,
-            "type": "Integer"
+            "type": "Number"
         },
         "applicantName": {
             "value": "Test Applicant",
@@ -14,7 +14,7 @@
         },
         "applicantAge": {
             "value": 44,
-            "type": "Integer"
+            "type": "Number"
         }
     }
 }
