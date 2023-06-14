@@ -48,5 +48,5 @@ jobs:
           path: staging
       - name: Run PMD
         run: mvn pmd:pmd pmd:cpd
-      -name: Run capacity tests
+      - name: Run capacity tests
         run: mvn gatling:test
