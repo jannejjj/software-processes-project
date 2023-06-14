@@ -1,5 +1,5 @@
 name: software-process
-run-name: ${{ github.actor }} is using the pipline 🚀🚗🏎🛺🤳
+run-name: ${{ github.actor }} is using the pipeline 🚀🚗🏎🛺🤳
 on: [push]
 jobs:
   build:
