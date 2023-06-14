@@ -14,7 +14,7 @@ public class CapacityTestSimulation extends Simulation {
                         .contentTypeHeader("application/json")
                         .userAgentHeader("Gatling/Performance Test");
 
-        // Starting the process
+        // Starting the processes
         ScenarioBuilder scn = CoreDsl.scenario("Capacity Test")
                         .exec(http("Start process")
                                         .post("/process-definition/key/Process_0umpg4c/start")
